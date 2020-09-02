@@ -6,57 +6,69 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <Button
-        android:id="@+id/city"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="Change"
-        android:text="City"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="358dp"
+        android:layout_height="108dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="Change"
-        android:text="Settings"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/city" />
-
-    <TextView
-        android:id="@+id/name_city"
-        android:layout_width="186dp"
-        android:layout_height="48dp"
-        android:text="Name_City"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
-    <TextView
-        android:id="@+id/temperature"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:text="temperature"
-        app:layout_constraintEnd_toStartOf="@+id/city"
-        app:layout_constraintStart_toEndOf="@+id/name_city"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/city"
+            android:layout_width="91dp"
+            android:layout_height="48dp"
+            android:onClick="Change"
+            android:text="City"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/internet_temperature"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:text="internet_temperature"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_city" />
+        <Button
+            android:id="@+id/settings"
+            android:layout_width="92dp"
+            android:layout_height="47dp"
+            android:onClick="Change"
+            android:text="Settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/city" />
+
+        <TextView
+            android:id="@+id/name_city"
+            android:layout_width="186dp"
+            android:layout_height="48dp"
+            android:text="Name_City"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:text="temperature"
+            app:layout_constraintEnd_toStartOf="@+id/city"
+            app:layout_constraintStart_toEndOf="@+id/name_city"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/internet_temperature"
+            android:layout_width="202dp"
+            android:layout_height="43dp"
+            android:text="internet_temperature"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_city" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <fragment
         android:id="@+id/fragment_main"
         android:name="com.example.weatherapplication.List_of_cities_fragment"
-        android:layout_width="396dp"
-        android:layout_height="624dp"
+        android:layout_width="355dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/settings" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        tools:ignore="MissingConstraints"
+        tools:layout="@layout/fragment_list_of_cities" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

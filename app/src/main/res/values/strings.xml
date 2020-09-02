@@ -2,4 +2,35 @@
     <string name="app_name">WeatherApplication</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_list_of_cities">List_of_cities_fragment</string>
+    <string name="fragment_settings">Settings_fragment</string>
+    <string name="weather">Weather</string>
+    <string name="notAdd">Your city will be selected here</string>
+    <string name="textCity">NameCity</string>
+    <string name="buttonAdd">Add</string>
+    <string name="button2" translatable="false">City</string>
+    <string name="temperature" translatable="false">temperature</string>
+    <string name="chooseCity">Choose a City</string>
+    <string name="checkBoxWindSpeed">Wind Speed</string>
+    <string name="checkBoxMoisturePercentage">Moisture Percentage</string>
+    <string name="checkBoxSunsetTime">Sunset Time</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="BlackStyle">BlackStyle</string>
+    <string name="OnlyWeather">OnlyWeather</string>
+    <string name="switch5">Пока еще не придумал</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 </resources>

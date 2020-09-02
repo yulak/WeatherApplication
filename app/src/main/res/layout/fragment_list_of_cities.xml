@@ -6,6 +6,126 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".List_of_cities_fragment"
-    android:background="@color/colorAccent">
+    android:background="#F08080"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/buttonMoscow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:text="Moscow"
+
+        app:layout_constraintEnd_toStartOf="@+id/buttonSamara"
+        app:layout_constraintStart_toEndOf="@+id/buttonSPB"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSPB"
+        android:layout_width="120dp"
+        android:layout_height="51dp"
+        android:orientation="horizontal"
+        android:text="SPB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSamara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Samara"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonVoskresensk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:text="Voskresensk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSPB" />
+
+    <Button
+        android:id="@+id/buttonKazan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:text="Kazan"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSochi"
+        app:layout_constraintStart_toEndOf="@+id/buttonVoskresensk"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMoscow" />
+
+    <Button
+        android:id="@+id/buttonSochi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:text="Sochi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSamara" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSunsetTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:text="@string/checkBoxSunsetTime"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.307" />
+
+    <CheckBox
+        android:id="@+id/checkBoxMoisturePercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:text="@string/checkBoxMoisturePercentage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxWindSpeed" />
+
+    <CheckBox
+        android:id="@+id/checkBoxWindSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:text="@string/checkBoxWindSpeed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxSunsetTime" />
+
+    <TextView
+        android:layout_width="91dp"
+        android:layout_height="24dp"
+        android:orientation="horizontal"
+        android:text="@string/chooseCity"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.708" />
+
+    <Button
+        android:id="@+id/buttonBackInMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:text="Назад"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.837" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
