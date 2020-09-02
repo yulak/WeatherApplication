@@ -28,10 +28,13 @@ public class MainActivity extends AppCompatActivity {
         fTrans = getSupportFragmentManager().beginTransaction();
         switch (view.getId()){
             case R.id.city:
-                fTrans.add(R.id.fragment_main, fragCity);
+                fTrans.remove(fragSettings);
+                //fTrans.add(R.id.fragment_main, fragCity);
                 break;
             case R.id.settings:
+                fTrans.remove(fragCity);
                 fTrans.replace(R.id.fragment_main, fragSettings);
+
             default:
                 break;
         }
