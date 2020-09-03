@@ -37,21 +37,4 @@ public class MainActivity extends AppCompatActivity {
         fTrans.commit();
     }
 
-    /*public void сhange (View view){
-        Fragment fragment = null;
-
-
-        switch (view.getId()){
-            case R.id.city: //нажимая эту кнопку вылезут города
-                fragment = new List_of_cities_fragment();
-                break;
-            case R.id.settings: //нажимая эту кнопку вылезут настройки
-                fragment = new Settings_fragment();
-                break;
-        }
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.fragment_main, fragment);
-        ft.commit();
-    }*/
 }
