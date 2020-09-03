@@ -1,47 +1,43 @@
 package com.example.weatherapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    List_of_cities_fragment fragCity;
-    Settings_fragment fragSettings;
+    ListOfCitiesFragment fragCity;
+    SettingsFragment fragSettings;
     FragmentTransaction fTrans;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        fragCity = new List_of_cities_fragment();
-        fragSettings = new Settings_fragment();
+        fragCity = new ListOfCitiesFragment();
+        fragSettings = new SettingsFragment();
 
     }
 
-    public void Change(View view){
+    public void сhange (View view){
         fTrans = getSupportFragmentManager().beginTransaction();
         switch (view.getId()){
             case R.id.city:
                 fTrans.remove(fragSettings);
-                //fTrans.add(R.id.fragment_main, fragCity);
+                fTrans.replace(R.id.fragment_main, fragCity);
                 break;
             case R.id.settings:
-                fTrans.remove(fragCity);
                 fTrans.replace(R.id.fragment_main, fragSettings);
-
+                fTrans.remove(fragCity);
             default:
                 break;
         }
         fTrans.commit();
     }
 
-    /*public void Change (View view){
+    /*public void сhange (View view){
         Fragment fragment = null;
 
 
