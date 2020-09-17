@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="103dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="412dp"
@@ -17,8 +27,9 @@
 
         <Button
             android:id="@+id/city"
-            android:layout_width="91dp"
-            android:layout_height="48dp"
+            android:layout_width="89dp"
+            android:layout_height="53dp"
+            android:layout_marginEnd="16dp"
             android:onClick="сhange"
             android:text="City"
             app:layout_constraintEnd_toEndOf="parent"
@@ -26,8 +37,10 @@
 
         <Button
             android:id="@+id/settings"
-            android:layout_width="92dp"
-            android:layout_height="47dp"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
             android:onClick="сhange"
             android:text="Settings"
             app:layout_constraintEnd_toEndOf="parent"
@@ -35,16 +48,17 @@
 
         <TextView
             android:id="@+id/name_city"
-            android:layout_width="170dp"
-            android:layout_height="53dp"
+            android:layout_width="171dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="28dp"
             android:text="Name_City"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/temperature"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
+            android:layout_width="107dp"
+            android:layout_height="50dp"
             android:text="temperature"
             app:layout_constraintEnd_toStartOf="@+id/city"
             app:layout_constraintStart_toEndOf="@+id/name_city"
@@ -52,40 +66,40 @@
 
         <Button
             android:id="@+id/internet_temperature"
-            android:layout_width="202dp"
+            android:layout_width="0dp"
             android:layout_height="43dp"
+            android:layout_marginTop="4dp"
             android:text="internet_temperature"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name_city" />
 
         <Button
             android:id="@+id/button_clear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="213dp"
-            android:layout_marginTop="53dp"
-            android:layout_marginEnd="19dp"
+            android:layout_width="116dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="8dp"
             android:onClick="сhange"
             android:text="Clear"
             app:layout_constraintEnd_toStartOf="@+id/settings"
-            app:layout_constraintStart_toStartOf="@+id/internet_temperature"
-            app:layout_constraintTop_toTopOf="@+id/temperature" />
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toEndOf="@+id/internet_temperature"
+            app:layout_constraintTop_toBottomOf="@+id/temperature" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <FrameLayout
         android:id="@+id/fragment_main"
         android:name="com.example.weatherapplication.SettingsFragment"
-        android:layout_width="413dp"
-        android:layout_height="363dp"
+        android:layout_width="406dp"
+        android:layout_height="302dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:layout_constraintVertical_bias="0.972"
         tools:ignore="MissingConstraints"
         tools:layout="@layout/fragment_list_of_cities" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
